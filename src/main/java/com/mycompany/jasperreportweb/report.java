@@ -13,6 +13,7 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -77,7 +78,7 @@ public class report extends HttpServlet {
         path = path + "report\\out.pdf";
 
         DAOStub dataBeanMaker = new DAOStub();
-        ArrayList<DataBean> dataBeanList = dataBeanMaker.getDataBeanList();
+        List<DataBean> dataBeanList = dataBeanMaker.getDataBeanList();
         JRBeanCollectionDataSource beanColDataSource = new JRBeanCollectionDataSource(dataBeanList);
         Map<String, Object> parameters = new HashMap<>();
         parameters.put("DATE", new Date());

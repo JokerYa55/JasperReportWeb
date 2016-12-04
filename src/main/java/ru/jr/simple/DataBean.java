@@ -15,6 +15,12 @@ public class DataBean {
     private String discipline;
     private Integer absence;
 
+    public DataBean(String name, String discipline, Integer absence) {
+        this.name = name;
+        this.discipline = discipline;
+        this.absence = absence;
+    }
+
     public String getName() {
         return name;
     }
